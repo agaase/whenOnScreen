@@ -12,6 +12,7 @@ The plugins uses the getBoundingClientRect function available as part of the W3C
 Call the utility on any element on which you want to do some operation once its visible on screen.
 
 You can call it in two ways.
+
 1. As a jquery plugin
 ```
 $("selector").whenOnScreen();
