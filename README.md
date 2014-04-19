@@ -13,11 +13,11 @@ Call the utility on any element on which you want to do some operation once its 
 
 You can call it in two ways.
 
-1. As a jquery plugin
+As a jquery plugin
 ```
 $("selector").whenOnScreen();
 ```
-2. Normal execution 
+Normal execution 
 ```
 whenOnScreen(element);
 ```
