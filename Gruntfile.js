@@ -5,10 +5,10 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         minSuffix: 'min',
-        distName: 'imgr',
+        distName: 'whenOnScreen',
         meta: {
             version: '<%= pkg.version %>',
-            banner: '/*! imgr.js - v<%= meta.version %> - ' +
+            banner: '/*! whenOnScreen.js - v<%= meta.version %> - ' +
                 '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
                 '* https://github.com/agaase/\n' +
                 '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
