@@ -17,7 +17,6 @@ You can call it in two ways.
 ```
 $("selector").whenOnScreen();
 ```
-
 2. Normal execution 
 ```
 whenOnScreen(element);
