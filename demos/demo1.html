@@ -1,4 +1,4 @@
-<html>
+<!doctype html>
 <head>
 	<title>Demo hor scroll</title>
 	<style>
@@ -19,7 +19,7 @@
 	}
 	</style>
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script src="dist/whenOnScreen-0.1.0.min.js"></script>
+	<script src="../dist/whenOnScreen-0.1.0.min.js"></script>
 </head>
 <body>
 <body style="">
@@ -39,11 +39,11 @@ document.write("</div>");
 }
 	$(".checkMe").whenOnScreen({
 		"callback": function(){
-			alert("visible");
+			$(".checkMe").css("background-color","green");
 		},
 		"parent" : $(".itemS")[0],
 		"debug" : true
-	})
+	});
 </script>
 </div>
 </body>

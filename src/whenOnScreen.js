@@ -1,6 +1,5 @@
-var whenOnScreen;
 var $ = $ || {};
-(function($,whenOnScreen){
+(function($,window){
 
 var outerEle;
 var eleToCheck;
@@ -82,7 +81,7 @@ if($.fn){
     bindScroll();
   };
 }
-whenOnScreen = function(ele,params){
+window.whenOnScreen = function(ele,params){
   eleToCheck = ele;
   outerEle = params.parent;
   callbackFn = params.callback;
@@ -90,4 +89,4 @@ whenOnScreen = function(ele,params){
   bindScroll();
 };
 
-})($,whenOnScreen);
+})($,window);
