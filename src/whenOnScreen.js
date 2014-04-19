@@ -7,6 +7,11 @@ var callbackFn;
 var eventTimer = 0;
 var keepChecking = false;
 var debug = false;
+/**
+ * a dummy object representing the position of window object as
+ * it would be returned by getBoundingClientRect()
+ * @type {Object}
+ */
 var win = {
             "height":window.innerHeight,
             "width":window.innerWidth,
@@ -22,7 +27,10 @@ var log = function(msg,t){
     lf.call(console,"whenonscreen:"+msg);
   }
 };
-
+/**
+ * Function executed everytime a page is moved/scrolled.
+ * @method pageMoveEvent
+ */
 var pageMoveEvent = function(){
   if(eventTimer){
     clearTimeout(eventTimer);
@@ -33,16 +41,27 @@ var pageMoveEvent = function(){
   },500);
 };
 
+/**
+ * Binds the scroll event to the window.
+ * Generally the scroll interaction is identified by touchmove or mousewheel event.
+ * @method bindScroll
+ */
 var bindScroll = function(){
   var timer=0;
   window.addEventListener("touchmove",pageMoveEvent);
   window.addEventListener("mousewheel",pageMoveEvent);
   checkIfElementLoaded();
 };
+
 var unbindScroll = function(){
   window.removeEventListener("touchmove",pageMoveEvent);
   window.removeEventListener("mousewheel",pageMoveEvent);
 };
+
+/**
+ * Generic utility to checks the visibility of an element against a parent.
+ * @method checkVisibility
+ */
 var checkVisibility = function(el,par){
   if(el.height >= par.height || (el.top <= par.bottom && el.bottom>par.top)){
       log("element is inside viewport vertically");
