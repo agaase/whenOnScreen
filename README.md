@@ -25,7 +25,7 @@ whenOnScreen(element);
 
 ####Parameters.
 1. callback - The callback function to call when the visibility check is passed.
-2. parent - pass if the element has a parent where inner scroll is enabled. Not passing this may result in passing the visibility check although the element is hidden behind the parent container.
+2. parent - pass if the element has a parent where inner scroll is enabled. Not passing this may result in passing the visibility check although the element is hidden behind the parent container. Check this [demo](http://agaase.github.io/webpages/whenonscreen/demos/demo3.html).
 3. debug - true if debug log is to be printed. (default - false)
  
 ```
