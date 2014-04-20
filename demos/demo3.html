@@ -1,0 +1,56 @@
+<!doctype html>
+<head>
+	<title>Demo : inner scroll hidden (broken)</title>
+	<style>
+	.item{
+		height:200px;
+		width:200px;
+		background-color:grey;
+		margin:20px;
+	}
+	.container{
+		height : 400px;
+		overflow:scroll;
+		background-color:lightgrey;
+		margin:20px;
+	}
+	.itemI { 
+		height: 100px;
+		overflow: scroll;
+		background-color: black;
+		margin: 10px;
+	}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="../dist/whenOnScreen-0.1.0.min.js"></script>
+</head>
+<body>
+<body style="">
+<script>
+for(var k=0;k<10;k++){
+		if(k==5){
+			document.write("<div class='container'>");
+			for(var i=0;i<10;i++){
+				if(i===7){
+					document.write("<div class='itemI checkMe' style='background-color:red;'></div>");
+				}
+				document.write("<div class='itemI'></div>");
+			}
+		document.write("</div>");
+		continue;
+		}
+		document.write("<div class='item'></div>");
+}
+</script>
+
+<script>
+	$(".checkMe").whenOnScreen({
+		"callback": function(){
+			alert("visible now");
+			$(".checkMe").css("background-color","green");
+		},
+		"debug" : true
+	});
+</script>
+</body>
+</html>
