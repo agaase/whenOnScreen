@@ -40,8 +40,10 @@ $(".checkMe").whenOnScreen({
 ```
 
 ####Demos
-1. [checking element inside a parent scrollable element](http://agaase.github.io/webpages/whenonscreen/demos/demo1.html)
+1. [checking element inside a parent scrollable element which is both horizontally and vertically scrollable](http://agaase.github.io/webpages/whenonscreen/demos/demo1.html)
 This demo checks for a box (one in red at bottom right) among the grid of boxes and turns it green once its visible.
+
+2. [checking element inside a parent scrollable element which is hidden](http://agaase.github.io/webpages/whenonscreen/demos/demo2.html) The demo checks for element which is inside another scrollable element which is itself hidden. (Check this [demo](http://agaase.github.io/webpages/whenonscreen/demos/demo3.html) which is broken where if you dont pass the parent element it returns visible although its hidden behind parent div. )
 
 ####Installing and Building
  The dependencies and build is managed through grunt and you can use following steps to locally run grunt.
