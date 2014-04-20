@@ -12,18 +12,12 @@
 	.itemC{
 		width:2500px;
 	}
-	.itemS{
-		width:100%;
-		height: 100%;
-		overflow:scroll;
-	}
 	</style>
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="../dist/whenOnScreen-0.1.0.min.js"></script>
 </head>
 <body>
 <body style="">
-<div class="itemS">
 <script>
 for(var k=0;k<10;k++){
 document.write("<div class='itemC'>");
@@ -35,13 +29,11 @@ for(var i=0;i<10;i++){
 		document.write("<div class='item'></div>");
 	}
 }
-document.write("</div>");
 }
 	$(".checkMe").whenOnScreen({
 		"callback": function(){
 			$(".checkMe").css("background-color","green");
 		},
-		"parent" : $(".itemS")[0],
 		"debug" : true
 	});
 </script>
